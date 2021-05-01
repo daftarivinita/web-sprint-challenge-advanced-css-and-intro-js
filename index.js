@@ -1,5 +1,4 @@
-const age = 32;
-console.log(age);
+
 
 export const artists = [
     {
