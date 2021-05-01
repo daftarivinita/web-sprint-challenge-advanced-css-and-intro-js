@@ -247,18 +247,17 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
   let newArray = [];
-  for(let i = 0; i<array.length; i++) {
-   
-    if(Number(array[i].years.split(' ').length) >= 1900 && Number(array[i].years.split(' ').length) < 2000){
-    newArray.push(array[i].name)
-
+  for(let i = 0; i < array.length; i++) {
+   let year = array[i].years.split(' - ');
+   let birthYear =Number(year[0]);
+   let deathYear = Number(year[1]);
+   if(birthYear >= 1900 && deathYear < 2000){
+    newArray.push(array[i].name);
+    }
   }
-  /*Your Code Here*/
-}
 return newArray;
 }
 console.log(get20s(artists));
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
